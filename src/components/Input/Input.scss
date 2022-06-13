@@ -1,0 +1,14 @@
+
+
+.input{
+    &__form {
+        display: flex;
+        flex-direction: column;
+        height: 100vw;
+        justify-content: space-between       
+    }
+
+    &__box{
+        height: 10vw;
+    }
+}
