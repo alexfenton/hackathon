@@ -6,6 +6,49 @@ import Results from "../Results/Results";
 export default class Input extends Component {
   state = {
     currentArray: []
+    //       {
+    //         title: "Ocean's Eleven",
+    //         year: "2001",
+    //         director: "Steven Soderbergh",
+    //         image:
+    //           "https://upload.wikimedia.org/wikipedia/en/6/68/Ocean%27s_Eleven_2001_Poster.jpg",
+    //       },
+    //       {
+    //         title: "Ocean's Twelve",
+    //         year: "2004",
+    //         director: "Steven Soderbergh",
+    //         image:
+    //           "https://upload.wikimedia.org/wikipedia/en/7/7d/Ocean%27s_Twelve_poster.jpg",
+    //       },
+    //       {
+    //         title: "Ocean's Thirteen",
+    //         year: "2007",
+    //         director: "Steven Soderbergh",
+    //         image:
+    //           "https://upload.wikimedia.org/wikipedia/en/c/c1/Oceans13Poster1.jpg",
+    //       },
+    //       {
+    //         title: "Ocean's Eleven",
+    //         year: "2001",
+    //         director: "Steven Soderbergh",
+    //         image:
+    //           "https://upload.wikimedia.org/wikipedia/en/6/68/Ocean%27s_Eleven_2001_Poster.jpg",
+    //       },
+    //       {
+    //         title: "Ocean's Twelve",
+    //         year: "2004",
+    //         director: "Steven Soderbergh",
+    //         image:
+    //           "https://upload.wikimedia.org/wikipedia/en/7/7d/Ocean%27s_Twelve_poster.jpg",
+    //       },
+    //       {
+    //         title: "Ocean's Thirteen",
+    //         year: "2007",
+    //         director: "Steven Soderbergh",
+    //         image:
+    //           "https://upload.wikimedia.org/wikipedia/en/c/c1/Oceans13Poster1.jpg",
+    //       },
+    //     ]
   };
 
 
@@ -58,7 +101,7 @@ export default class Input extends Component {
 
     let results = [];
     for (let i = 0; i < sorted_arr.length - 1; i++) {
-      if (sorted_arr[i + 1].id == sorted_arr[i].id) {
+      if (sorted_arr[i + 1].id === sorted_arr[i].id) {
         results.push(sorted_arr[i]);
       }
     }
@@ -68,7 +111,9 @@ export default class Input extends Component {
 
   render() {
     return (
+        <div className="main">
         <section className="input__section">
+            <h1 className="input__heading">Met <span style={{color:'red'}} >on</span> Set</h1>
       <form className="input__form"onSubmit={this.handleSubmit}>
         <label htmlFor="actor1__forename">First Name</label>
         <input
@@ -106,10 +151,13 @@ export default class Input extends Component {
           Search
         </button>
       </form>
-      <Results displayedArray = {this.state.currentArray}/> 
       </section>
+      <Results displayedArray = {this.state.currentArray}/>
+      </div>
 );
+
 }
+
 
 };
 

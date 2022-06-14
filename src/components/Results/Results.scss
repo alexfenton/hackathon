@@ -1,0 +1,48 @@
+.results {
+  &__section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  &__heading {
+    width: 100%;
+  }
+  &__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+    width: 28vw;
+    justify-content: flex-end;
+    :hover .overlay{
+      width: 100%;
+    }
+  }
+
+  &__overlay{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #008CBA;
+      overflow: hidden;
+      width: 0;
+      height: 100%;
+      transition: .5s ease;
+    }
+
+
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 6px;
+    align-items: flex-start;
+    text-align: left;
+    height: 100%;
+    width: 50%;
+  }
+  &__image {
+    height: 20vw;
+  }
+
+}
